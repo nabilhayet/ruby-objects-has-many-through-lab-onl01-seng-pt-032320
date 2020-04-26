@@ -23,5 +23,7 @@ class Patient
   def doctors
     ## that iterates over that patient's Appointments and collects the doctor that belongs to each Appointment.
     
+    appoints= Appointment.all.select{|appoint| appoint.patient==self}
+    
   end
 end 
